@@ -31,4 +31,8 @@ def process_frame(frame):
     return av.VideoFrame.from_ndarray(img, format="bgr24")
 
 
-webrtc_streamer(key="emotion-analysis", video_frame_callback=process_frame)
+webrtc_streamer(key="emotion-analysis", video_frame_callback=process_frame, 
+                rtc_configuration={
+        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]
+                       }]
+    })
