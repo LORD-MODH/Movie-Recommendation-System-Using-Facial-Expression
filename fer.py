@@ -6,7 +6,7 @@ def facial_analysis():
     run = st.checkbox('Run Webcam')
     FRAME_WINDOW = st.image([])
     if run:
-        camera = cv2.VideoCapture(0)
+        camera = cv2.VideoCapture(1)
         while run:
             ret, frame = camera.read()
             if not ret:
