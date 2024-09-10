@@ -19,10 +19,10 @@ def process_frame(frame):
             cv2.putText(img, dominant_emotion, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
 
             last_analysis_time = current_time
-        except ValueError:
+         except ValueError:
             pass
 
-        return av.VideoFrame.from_ndarray(img, format="bgr24")
+         return av.VideoFrame.from_ndarray(img, format="bgr24")
     else:
         return frame  
 
