@@ -32,7 +32,7 @@ def process_frame(frame):
 
 
 webrtc_streamer(key="emotion-analysis", video_frame_callback=process_frame, 
-        #         rtc_configuration={
-        # "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]
-        #                }]
-    )
+                rtc_configuration={
+        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]
+                       }]
+                })
